@@ -66,7 +66,7 @@ public class Main {
         searchButton.click();
 
         // quit 
-        Thread.sleep(6000);
+        Thread.sleep(8000);
         driver.quit();
         
     }
