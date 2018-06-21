@@ -20,19 +20,22 @@ public class Main {
         // select destination
         WebElement destination = driver.findElement(By.id("ss"));
         destination.sendKeys("Belgrade");
+        
+        WebElement chooseDestination = driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]"));
+        chooseDestination.click();
 
         // check-in date
-        WebElement checkIn = driver.findElement(By.className("xp__dates__checkin"));
-        checkIn.click();
+//        WebElement checkIn = driver.findElement(By.className("xp__dates__checkin"));
+//        checkIn.click();
 
-        WebElement checkInDate = driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[3]/div/div/div[1]/table/tbody/tr[3]/td[7]/span"));
+        WebElement checkInDate = driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[3]/div/div/div[1]/table/tbody/tr[5]/td[4]/span"));
         checkInDate.click();
 
         // check-out date
         WebElement checkOut = driver.findElement(By.className("xp__dates__checkout"));
         checkOut.click();
 
-        WebElement checkOutDate = driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div/div[3]/div/div/div/div[2]/div[2]/div[3]/div/div/div[1]/table/tbody/tr[5]/td[6]/span"));
+        WebElement checkOutDate = driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div/div[3]/div/div/div/div[2]/div[2]/div[3]/div/div/div[2]/table/tbody/tr[2]/td[7]/span"));
         checkOutDate.click();
 
         // Guests      
@@ -65,9 +68,9 @@ public class Main {
         WebElement searchButton = waitSearch.until(ExpectedConditions.elementToBeClickable(By.className("sb-searchbox__button")));
         searchButton.click();
 
-        // quit 
-        Thread.sleep(8000);
-        driver.quit();
+//        // quit 
+//        Thread.sleep(8000);
+//        driver.quit();
         
     }
 
