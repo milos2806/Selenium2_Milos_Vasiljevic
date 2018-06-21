@@ -20,14 +20,13 @@ public class Main {
         // select destination
         WebElement destination = driver.findElement(By.id("ss"));
         destination.sendKeys("Belgrade");
-        
+
         WebElement chooseDestination = driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]"));
         chooseDestination.click();
 
-        // check-in date
-//        WebElement checkIn = driver.findElement(By.className("xp__dates__checkin"));
-//        checkIn.click();
-
+        // check-in date : this will stay in comment because website automatically open "checkIn"  after we click on destination
+        // WebElement checkIn = driver.findElement(By.className("xp__dates__checkin"));
+        // checkIn.click();
         WebElement checkInDate = driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[3]/div/div/div[1]/table/tbody/tr[5]/td[4]/span"));
         checkInDate.click();
 
@@ -68,10 +67,10 @@ public class Main {
         WebElement searchButton = waitSearch.until(ExpectedConditions.elementToBeClickable(By.className("sb-searchbox__button")));
         searchButton.click();
 
-//        // quit 
-//        Thread.sleep(8000);
-//        driver.quit();
-        
+        // quit 
+        Thread.sleep(4000);
+        driver.quit();
+
     }
 
 }
